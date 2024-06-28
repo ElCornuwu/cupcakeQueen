@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Tortas - Productos{% endblock %}
+
+{% block content %}
+<section class="producto" id="producto">
+    <div class="main-text">
+        <h2>Alfajores</h2> 
+    </div>
+
+    <div class="menu-content">
+        <div class="row">
+            <img src="{% static 'img/alfa1.JPG' %}" alt="main-product1">
+            <div class="menu-text">
+                <div class="menu-teft">
+                    <h4>Alfajor Chocolate</h4>
+                </div>
+                <div class="menu-right">
+                    <h5>$99.999</h5>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
+        </div>
+        <div class="row">
+            <img src="{% static 'img/alfa1.JPG' %}" alt="main-product2">
+            <div class="menu-text">
+                <div class="menu-teft">
+                    <h4>Alfajor Manjar</h4>
+                </div>
+                <div class="menu-right">
+                    <h5>$89.999</h5>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
+        </div>
+        <div class="row">
+            <img src="{% static 'img/alfa1.JPG' %}" alt="main-product3">
+            <div class="menu-text">
+                <div class="menu-teft">
+                    <h4>Alfajor Frambuesa</h4>
+                </div>
+                <div class="menu-right">
+                    <h5>$79.999</h5>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
+        </div>
+        <div class="row">
+            <img src="{% static 'img/alfa1.JPG' %}" alt="main-product3">
+            <div class="menu-text">
+                <div class="menu-teft">
+                    <h4>Alfajor</h4>
+                </div>
+                <div class="menu-right">
+                    <h5>$79.999</h5>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
+        </div>
+        <!-- Puedes agregar más productos según sea necesario -->
+    </div>  
+</section>
+{% endblock %}

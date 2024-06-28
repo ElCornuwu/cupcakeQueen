@@ -1,0 +1,59 @@
+<!-- form.html -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Contáctanos
+{% endblock %}
+
+{% block content %}
+<div class="form-div">
+    <div class="container titulo_form_top">
+        <div class="titulo_form"><h1>Contáctanos</h1> 
+        
+        </div> <div class="container titulo"></div>
+        <p class="text_form">Comunica tus dudas, comentarios o sugerencias por medio del siguiente formulario</p>
+    </div>
+    <div class="container formulario">
+        <form id="form">
+            <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id='nombre' maxlength="50">
+            <div id="eNombre" class="errorForm"><p>Debe rellenar este campo</p></div>
+            </div>
+
+            <div class="mb-3">
+            <label for="email" class="form-label">Correo</label>
+            <input type="text" class="form-control" id='email' maxlength="320">
+            <div id="eEmail" class="errorForm"><p>Formato inválido</p></div>
+            </div>
+
+            <div class="mb-3">
+            <label for="asunto" class="form-label">Asunto</label>
+            <input type="text" class="form-control" id='asunto' maxlength="60">
+            <div id="eAsunto" class="errorForm"><p>Debe rellenar este campo</p></div>
+            </div>
+
+            <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea maxlength="1500" class="form-control" id="mensaje" cols="30" rows="7"></textarea>
+            <div id="eMensaje" class="errorForm"><p>Debe rellenar este campo</p></div>
+            </div>
+
+            <button style="background-color: #a18052; border-color: #a18052;" type="submit" class="btn btn-primary container" id="btn-enviar">Enviar</button>   
+        
+        </form>
+    </div>
+</div>
+<div class="container_modal">
+    <div class="modal_form" id="cont_modal">
+        <div>
+            <pre class="modal_content">¡Recibimos tu mensaje! Gracias por comunicarte.      <span class="modal_close" id="mod_close">&times;</span>
+            </pre>
+        </div>
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    
+{% endblock %}

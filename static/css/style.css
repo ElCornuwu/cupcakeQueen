@@ -1,0 +1,839 @@
+/*producto*/
+@font-face{
+    font-family: "Merienda";
+    src: url(resources/Merienda-VariableFont_wght.ttf);
+    font-weight: 600;
+}
+
+.menu-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+    gap: 7rem;
+    align-items: center;
+    margin-top: 4rem;
+    cursor: pointer;
+    margin-left: 85px;
+    margin-right: 85px;  
+}
+
+.row img{
+    width: 100%;
+    height: auto;
+    border-radius: 30px; 
+}
+
+.row{
+    transition: all .40s ease;
+}
+
+.producto{
+    padding-top: 110px;
+    margin-bottom: 70px;
+}
+
+.menu-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.menu-teft h4{
+    font-size: 23px;
+    font-family: "Merienda";
+
+}
+
+.menu-right h5{
+    color:  #7a3d3c;
+    font-size: 23px;
+}
+
+.row p{
+    color: black;
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.rowP:hover{
+    transform: scale(1.02);
+}
+
+.main-text h2{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Merienda";
+}
+
+.body-color{
+    background-color: #faeee3;
+}
+
+.body-color p{
+    font-family: AbeeZee;
+}
+
+/*popup*/
+button{
+    background-color: #47a486;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 14px;
+    padding: 10px 25px;
+}
+
+.modal-container{
+    display:flex;
+    background-color: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.show{
+    pointer-events:auto;
+    opacity: 1;
+}
+
+.modal{
+    background-color: white;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
+    text-align: center;
+}
+
+/*login*/
+.inicio-login {
+    font-size: 40px; 
+    text-align: center; 
+    color: black;
+    font-family: Merienda;
+}
+
+.container-login{
+    padding-top: 10%;
+    min-width:max-content;
+    min-height:max-content;
+    width: 40%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a18052;
+    min-width: 500px; 
+    margin-top: 20%;
+    margin-bottom: 20%;
+    font-family: AbeeZee;
+    font-size: 25px;
+    background-color: white;
+}
+
+.container-login input{
+    border-color: black; 
+    border-radius: 0%;
+}
+
+.texto-inf{
+    color: black;
+    text-decoration: underline;
+    font-size: large;
+    padding-top: 15px; 
+    padding-bottom: 5px; 
+    text-align: center;
+}
+
+.btn-login{
+    width: 100%; 
+    height: 40px; 
+    margin-top: 30px; 
+    margin-bottom: 30px;
+}
+
+.btn-style{
+   width: 30%;
+   height: 40px;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   background-color: #c5d8b8;
+   border-radius: 0%;
+   color: black;
+}
+
+.texto-relleno{
+    font-family: Abeezee;
+    margin-bottom: 5px;
+}
+
+.texto-error{
+    color: red;
+    font-size: 17px;
+}
+
+.titulo-login-top{
+    padding: 10px; 
+    position: relative; 
+    margin-bottom: 110px;
+}
+
+.titulo-div-login{
+    text-align: center;
+    width: 350px;
+    padding-bottom: 0px;
+    display: inline-block;
+    background-color: white;
+    padding: 5px;
+    justify-self: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-family: Merienda;
+    z-index: 2;
+}
+
+.titulo-login{
+    background-color: #a18052;
+    height: 3px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.btn-login{
+    width: 100%;
+}
+
+/*index*/
+@font-face{
+    font-family: "Merienda";
+    src: url(resources/Merienda-VariableFont_wght.ttf);
+    font-weight: 600;
+}
+
+.icono-login{
+    opacity: 0.7;
+    width: 70px;
+    height: auto;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.car-div{
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    border-width: 1px;
+    border-color: #a16852;
+    padding-top: 50px;
+    padding-bottom: 50px;       
+    position: relative;
+    box-sizing: border-box;
+    
+}
+
+.carousel{
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+.car-text{
+    font-size: 20px;    
+    position: absolute;
+    color: white; 
+    font-family: Merienda;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.heading-1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+    color: black;
+}
+
+.carousel-inner{
+    border-radius: 10px;
+}
+.top-categoria{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem ;
+    font-family: "Merienda";
+}
+
+.container-categorias{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+
+.div_categoria{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-width: 1px;
+    border-color: rgb(161, 128, 82);
+    padding: 50px;
+    width: 100%;
+}
+
+.card-category{
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    gap: 2rem;
+}
+
+.category-torta{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.category-alfajor{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.category-cupcake{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-category p{
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: capitalize;
+    position: relative;
+}
+.card-category p::after{
+    content: '';
+    width: 2.5rem;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+.card-category a{
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-category a:hover{
+    color: peru;
+}
+
+.fondo-index{
+    background-color: #faeee3;
+    background-blend-mode: lighten;
+    height: 100%; 
+    width: 100%;    
+    z-index: -5;
+    position: relative;
+}
+
+.navbar {
+    background-color: #fdcf76; 
+    height: 80px;
+}
+
+.navbar-custom {
+    padding: 20px 0; 
+}
+
+.navbar-collapse{
+    background-color: #fdcf76; 
+    z-index: 3;
+    padding: 15px;
+}
+
+.navbar-brand img {
+    height: 75px; 
+    width: auto; 
+    
+}
+
+.navbar-nav .nav-link {
+    color: #fdfdfd; 
+    margin-right: 30px; 
+    font-size: 23px; 
+    font-family: Merienda;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #a18052;
+}
+
+.search-index{
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 0.5;
+    appearance: none;
+    background-clip: padding-box;
+    border-radius: 4rem;
+    border-width: 0;
+    margin-top: 7px;
+    margin-right: 10px;
+    color: black;
+}
+
+.img-navbar-1{
+    width: auto;
+    height: 46px;
+    margin-top: 2px;
+    margin-left: 25px;
+    filter:invert(100%);
+    
+}
+
+.img-navbar-2{
+    width: auto;
+    height: 39px;
+    margin-top: 6px;
+    margin-left: 15px;
+    margin-right: 40px;
+    filter:invert(100%);
+    
+}
+
+.img-navbar-1:hover,
+.img-navbar-2:hover{
+    filter: invert(53%) sepia(33%) saturate(545%) hue-rotate(355deg) brightness(92%) contrast(84%);
+    cursor: pointer;
+    
+}
+
+.search-index:focus{
+    outline: none;
+   
+}
+
+/*horario*/
+@font-face{
+    font-family: Merienda;
+    src: url(resources/Merienda-VariableFont_wght.ttf);
+    font-weight: 600;
+}
+
+@font-face{
+    font-family: ABeeZee;
+    src: url(resources/ABeeZee-Regular.ttf);
+    font-weight: 400;
+}
+
+.form-div{
+    background-color: white;
+    position: relative;
+    padding: 10px 40px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a18052;
+    z-index: -2;
+    width: 60%;
+    max-width: 1400px;
+    min-width: 800px;
+
+}
+
+.horario-div {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.horario-div table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.horario-div th,
+.horario-div td {
+    padding: 15px;
+    border: none;
+    font-size: 22px;
+}
+
+.horario-div th {
+    background-color: #f7efe9;
+    font-weight: bold;
+}
+
+.horario-div td {
+    background-color: #fff; 
+    text-align: left;
+}
+
+.horario-div tbody tr:nth-child(even) {
+    background-color: #f7efe9; 
+}
+
+.horario-div td:nth-child(2) {
+    text-align: right;
+}
+
+.errorForm{
+    display: none;
+    color: red;
+    font-family: Cambria;
+    font-size: 14px;
+    opacity: 65%;
+}
+
+.formulario{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a18052;
+    padding: 60px;
+    font-family: AbeeZee;
+    z-index: 10;
+}
+
+.titulo_form{
+    text-align: center;
+    width: 260px;
+    padding-bottom: 0px;
+    display: inline-block;
+    background-color: white;
+    padding: 5px;
+    justify-self: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-family: Merienda;
+    z-index: 2;
+
+   
+}
+
+.titulo_form_top{
+    padding: 50px; 
+    position: relative;
+    
+}
+
+.titulo{
+    background-color: #a18052;
+    height: 3px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.text_form{
+    margin-top: 100px; 
+    text-align: center; 
+    font-family: Merienda;
+}
+
+.container_modal{
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    padding: 0px;
+}
+
+.modal_form{
+    display: none;
+    background-color: white;
+    width: 440px;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a18052;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.modal_close{
+    font-size: 25px;
+}
+
+.modal_close:hover,
+.modal_close:focus {
+  color: rgb(177, 177, 177);
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+.modal_content{
+    font-family: Abeezee;
+    font-size: 16px;
+    color: black;
+}
+
+/*form*/
+@font-face{
+    font-family: Merienda;
+    src: url(resources/Merienda-VariableFont_wght.ttf);
+    font-weight: 600;
+}
+
+@font-face{
+    font-family: ABeeZee;
+    src: url(resources/ABeeZee-Regular.ttf);
+    font-weight: 400;
+}
+
+.form-div{
+    background-color: white;
+    position: relative;
+    padding: 10px 40px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a18052;
+    z-index: -2;
+    width: 60%;
+    max-width: 1400px;
+    min-width: 800px;
+
+}
+
+.errorForm{
+    display: none;
+    color: red;
+    font-family: Cambria;
+    font-size: 14px;
+    opacity: 65%;
+}
+
+.formulario{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a18052;
+    padding: 60px;
+    font-family: AbeeZee;
+    z-index: 10;
+}
+
+.titulo_form{
+    text-align: center;
+    width: 260px;
+    padding-bottom: 0px;
+    display: inline-block;
+    background-color: white;
+    padding: 5px;
+    justify-self: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-family: Merienda;
+    z-index: 2;
+}
+
+.titulo_form_top{
+    padding: 50px; 
+    position: relative; 
+}
+
+.titulo{
+    background-color: #a18052;
+    height: 3px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.text_form{
+    margin-top: 100px; 
+    text-align: center; 
+    font-family: Merienda;
+}
+
+.container_modal{
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    padding: 0px;
+}
+
+.modal_form{
+    display: none;
+    background-color: white;
+    width: 440px;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a18052;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.modal_close{
+    font-size: 25px;
+}
+
+.modal_close:hover,
+.modal_close:focus {
+  color: rgb(177, 177, 177);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal_content{
+    font-family: Abeezee;
+    font-size: 16px;
+    color: black;
+}
+
+/*footer*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: #eaccad;
+}
+
+.footercontainer{
+    width: 100%;
+    padding: 40px 30px 20px;
+}
+
+.iconos{
+    display: flex;
+    justify-content: center;
+    background-color: #eaccad;
+}
+
+.iconos a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #e8c39e;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.iconos a i {
+    font-size: 2em;
+    color: white;
+    opacity: 0.9;
+}
+
+.iconos a:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+
+.iconos a:hover i{
+    color: black;
+    transition: 0.5s;
+
+}
+
+.footernav{
+    margin: 30px 0;
+}
+
+.footernav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footernav ul li a{
+    color: black;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footernav ul li a:hover{
+    opacity: 1;
+}
+
+.footerbotton{
+    background-color: #eaccad;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.footerbotton p{
+    color:black;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media(max-width:700px){
+    .footernav ul{
+        flex-direction: column;
+    }
+    .footernav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
