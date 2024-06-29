@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
+from .forms import CustomUserCreationForm
+from django.contrib.auth import authenticate, login
 from django.urls import reverse
 from .forms import ProductoForm
 from .models import Producto
@@ -10,6 +12,17 @@ from django.views.generic import View
 
 def index(request):
     return render(request, 'index.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('index')
+    else:
+        form = CustomUserCreationForm()
+    return render(request, 'registration/register.html', {'form': form})
 
 def exit(request):
     logout(request)
@@ -39,6 +52,9 @@ def productos(request):
 
 def tortas(request):
     return render(request, 'tortas.html')
+
+def direccion(request):
+    return render(request, 'direccion.html')    
 
 def agregar_producto(request):
     if request.method == 'POST':

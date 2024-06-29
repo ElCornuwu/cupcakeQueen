@@ -6,6 +6,7 @@ from .views import ProductoDeleteView
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('register/', views.register, name='register'),
     path('logout/', views.exit, name='exit'),
     path('alfajores/', views.alfajores, name='alfajores'),
     path('base/', views.base, name='base'),
@@ -14,6 +15,7 @@ urlpatterns = [
     path('horario/', views.horario, name='horario'),
     path('productos/', views.productos, name='productos'),
     path('tortas/', views.tortas, name='tortas'),
+    path('direccion/', views.direccion, name='direccion'),
     path('agregarProducto/', views.agregar_producto, name='agregarProducto'),
     path('eliminar/<int:producto_id>/', ProductoDeleteView.as_view(), name='eliminar_producto'),
 ]
