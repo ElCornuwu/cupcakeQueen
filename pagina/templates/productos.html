@@ -6,10 +6,18 @@
 {% endblock %}
 
 {% block content %}
+{% load humanize %}
 <section class="producto" id="producto">
     <div class="producto-text">
         <h2>Nuestros Productos</h2>
     </div>
+    {% if request.user.is_superuser %}
+    <div>
+        <div style="text-align: center;">
+            <a href="{% url 'agregarProducto' %}"><button>agregar producto</button></a>
+        </div>
+    </div>
+    {% endif %}
     <div class="menu-content">
         {% for producto in productos %}
         <div class="card">
@@ -17,8 +25,12 @@
             <div class="card-content">
                 <h3>{{ producto.nombre }}</h3>
                 <p>{{ producto.descripcion }}</p>
-                <p class="price">Precio: ${{ producto.precio }}</p>
-                <a href="{% url 'eliminar_producto' producto.id %}">Eliminar Producto</a>
+                <p>{{ producto.categoria}}</p>
+                <p class="price">Precio: ${{ producto.precio|intcomma }}</p>
+                {% if request.user.is_superuser %}
+                    <a href="{% url 'editarProducto' producto.id %}">Editar Producto</a>
+                    <a href="{% url 'eliminar_producto' producto.id %}">Eliminar Producto</a>
+                {% endif %}
             </div>
         </div>
         {% endfor %}
