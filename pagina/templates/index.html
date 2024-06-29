@@ -7,7 +7,23 @@
 
 {% block content %}
 
-<div class="container car-div">
+
+<section class="home" style="background-image: linear-gradient(100deg,#000000,#00000020), url('{% static 'img/fondoidex.jpg' %}')">
+    <div class="home-text">
+        <h1><span>Bienvenidos a</span> Cupcake Queen</h1>
+        <p> En nuestro emprendimientos nos dedicamos a crear experiencias dulces 
+            y memorables que deleitan todos los sentidos. Con una convinacion de creatividad artesanal y 
+            los mejores ingredientes. Somos un emprendimiento repostero, comprometida con 
+            la calidad y la satisfacción de nuestros clientes. Utilizamos los mejores ingredientes para
+            elaborar una amplia variedad de pasteles, tartas, cupcakes y postres personalizados  
+            asegurando que cada bocado sea una delicia única. </p>      
+    </div>
+</section>
+
+
+
+<div class="juan">
+
     <div id="carouselIndex" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselIndex" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -16,21 +32,21 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <a href="{% url 'cupcake' %}"><img src="{% static 'img/car1.jpg' %}" class="d-block w-100 img-index" alt="..."></a>
+                <a href="{% url 'alfajores' %}"><img src="{% static 'img/carrusel1.jpg' %}" class="d-block w-100 img-index" alt="..."></a>
                 <div class="d-none d-md-block car-text">
                     <h5>First slide label</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="{% url 'cupcake' %}"><img src="{% static 'img/car2.jpeg' %}" class="d-block w-100 img-index" alt="..."></a>
+                <a href="{% url 'tortas' %}"><img src="{% static 'img/carrusel2.jpg' %}" class="d-block w-100 img-index" alt="..."></a>
                 <div class="d-none d-md-block car-text">
                     <h5>Second slide label</h5>
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="{% url 'tortas' %}"><img src="{% static 'img/car3.jpeg' %}" class="d-block w-100 img-index" alt="..."></a>
+                <a href="{% url 'cupcake' %}"><img src="{% static 'img/carrusel3.jpg' %}" class="d-block w-100 img-index" alt="..."></a>
                 <div class="d-md-block car-text">
                     <h5>Third slide label</h5>
                     <p>Some representative placeholder content for the third slide.</p>
@@ -51,15 +67,15 @@
     <section class="container top-categoria">
         <h1 class="heading-1">Categorías</h1>
         <div class="container-categorias">
-            <div class="card-category category-torta" style="background-image: linear-gradient(#00000080, #00000080), url('{% static "img/torta.jpeg" %}')">
+            <div class="card-category category-torta" style="background-image: linear-gradient(#00000080, #00000080), url('{% static 'img/torta.jpeg' %}')">
                 <p>Tortas</p>
                 <a href="{% url 'tortas' %}">Ver más</a>   
             </div>
-            <div class="card-category category-alfajor" style="background-image: linear-gradient(#00000080, #00000080), url('{% static "img/alfajores.jpeg" %}')">
+            <div class="card-category category-alfajor" style="background-image: linear-gradient(#00000080, #00000080), url('{% static 'img/alfajores.jpeg' %}')">
                 <p>Alfajores</p>
                 <a href="{% url 'alfajores' %}">Ver más</a>
             </div>
-            <div class="card-category category-cupcake" style="background-image: linear-gradient(#00000080, #00000080), url('{% static "img/Cupcakes.jpeg" %}')">
+            <div class="card-category category-cupcake" style="background-image: linear-gradient(#00000080, #00000080), url('{% static 'img/Cupcakes.jpeg' %}')">
                 <p>Cupcakes</p>
                 <a href="{% url 'cupcake' %}">Ver más</a>   
             </div> 

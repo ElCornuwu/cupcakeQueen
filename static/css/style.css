@@ -75,45 +75,7 @@
     font-family: AbeeZee;
 }
 
-/*popup*/
-button{
-    background-color: #47a486;
-    border: 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    color: white;
-    font-size: 14px;
-    padding: 10px 25px;
-}
 
-.modal-container{
-    display:flex;
-    background-color: rgba(0,0,0,0.3);
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    pointer-events: none;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-}
-
-.show{
-    pointer-events:auto;
-    opacity: 1;
-}
-
-.modal{
-    background-color: white;
-    width: 600px;
-    max-width: 100%;
-    padding: 30px 50px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
-    text-align: center;
-}
 
 /*login*/
 .inicio-login {
@@ -236,6 +198,55 @@ button{
     src: url(resources/Merienda-VariableFont_wght.ttf);
     font-weight: 600;
 }
+/*---------------------------------*/
+section{
+    padding: 45px 10% 20px;
+}
+.home {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+
+
+    height: 37rem;
+    background-size: cover;
+    background-position: center;
+}
+.home-text{
+    animation: mover-izquierda-derecha 2s 1;
+    animation-fill-mode: forwards;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+.home-text h1{
+    color: white;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    line-height: 1.0;
+}
+.home-text p{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 30rem; 
+}
+
+@keyframes mover-izquierda-derecha  {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(5px);
+    }   
+}
+/*---------------------------------*/
 
 .icono-login{
     opacity: 0.7;
@@ -247,9 +258,12 @@ button{
     overflow: clip;
 }
 
+
+
+
 .car-div{
     margin-top: 50px;
-    margin-left: 0;
+    margin-left: 50px;
     margin-right: 0;
     border-width: 1px;
     border-color: #a16852;
@@ -259,12 +273,13 @@ button{
     box-sizing: border-box;
     
 }
-
-.carousel{
-    padding-left: 50px;
-    padding-right: 50px;
+    
+.juan{
+    width: 100%;
+    margin-top: 100px; 
     
 }
+
 
 .car-text{
     font-size: 20px;    
@@ -288,8 +303,12 @@ button{
 }
 
 .carousel-inner{
-    border-radius: 10px;
+    border-radius: 0px;
+    
+    background-color: transparent;
 }
+
+/*---------------------------------*/
 .top-categoria{
     display: flex;
     flex-direction: column;
@@ -307,7 +326,7 @@ button{
 .div_categoria{
     margin-top: 50px;
     margin-bottom: 50px;
-    border-width: 1px;
+    border-width: 0px;
     border-color: rgb(161, 128, 82);
     padding: 50px;
     width: 100%;
@@ -319,23 +338,26 @@ button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 1rem;
+    border-radius: 2rem;
     gap: 2rem;
-}
+} 
 
 .category-torta{
+    background-image: linear-gradient(#00000080,#00000080),url(img/torta.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .category-alfajor{
+    background-image: linear-gradient(#00000080,#00000080),url(img/alfajores.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .category-cupcake{
+    background-image: linear-gradient(#00000080,#00000080),url(img/cupcakes.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -366,7 +388,7 @@ button{
 .card-category a:hover{
     color: peru;
 }
-
+/*---------------------------------*/
 .fondo-index{
     background-color: #faeee3;
     background-blend-mode: lighten;
@@ -379,21 +401,26 @@ button{
 .navbar {
     background-color: #fdcf76; 
     height: 80px;
+   
+    
 }
 
 .navbar-custom {
     padding: 20px 0; 
+   
 }
 
 .navbar-collapse{
     background-color: #fdcf76; 
     z-index: 3;
     padding: 15px;
+   
 }
 
 .navbar-brand img {
     height: 75px; 
-    width: auto; 
+    width: auto;
+  
     
 }
 
@@ -403,6 +430,7 @@ button{
     font-size: 23px; 
     font-family: Merienda;
     font-weight: bold;
+
 }
 
 .navbar-nav .nav-link:hover {
@@ -433,6 +461,7 @@ button{
     margin-left: 25px;
     filter:invert(100%);
     
+    
 }
 
 .img-navbar-2{
@@ -456,6 +485,8 @@ button{
     outline: none;
    
 }
+
+
 
 /*horario*/
 @font-face{
@@ -851,4 +882,81 @@ footer{
         text-align: center;
         margin: 10px;
     }
+}
+
+
+/*direccion*/
+
+
+
+.contenedordir{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.mapa{
+    margin-right: 50px;
+}
+
+.titulo-direccion p {
+    margin-left: 15px;
+    color: black;
+    font-family:  Abeezee;
+    font-size: 1.1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.titulo-direccion i{
+    display: flex;
+    text-decoration: none; 
+}
+.titulo-direccion ul {
+    list-style-type: none;
+    margin-top: 100px;
+    font-size: 1.1rem;
+    
+}
+
+.bi-whatsapp{
+    color: green;
+}
+.bi-telephone-fill{
+    color: rgba(20, 20, 145, 0.96);
+}
+
+.bi-geo-alt-fill{
+    color: rgb(209, 33, 33);
+}
+
+.bi-geo-alt-fill p{
+    font-family:  Abeezee;
+    
+}
+.titulo-direccion{
+    background-color: white;
+   
+}
+
+.horizontal{
+    background-color: #faeee3;
+    width: 80%;
+    height: 2px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.titulo-direccion h1{
+   
+    justify-content: center;
+    color: black;
+    font-family:  Abeezee;
+    font-size: 1.1rem;
+    margin-left: 15%;
+    margin-right: 5%;
+   
 }
