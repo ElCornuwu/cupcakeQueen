@@ -7,10 +7,9 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="container container-login">
+
+{% load crispy_forms_tags %}
+                <div class="container-login">
                     <div class="container titulo-login-top">
                         <div class="titulo-div-login"><h1>Iniciar Sesión</h1>   
                         </div> <div class="container titulo-login"></div>
@@ -18,88 +17,16 @@
 
                     <form id="Login" action="" method="post">
                         {% csrf_token %}
-                        <div class="mb-3"> 
-                            <label for="LoginEmail" class="texto_relleno">Ingrese su nombre de usuario</label>
-                            <input type="text" name='username' class="form-control"
-                                id="LoginEmail" placeholder="Nombre" >
-                                
-                            <div id="valCorreoLog" class="texto-error"></div>
-                        </div>
+                        
+                        {{ form | crispy }}
+                        
+                        <a href="{% url 'register' %}"><h1 class="texto-inf">Registrarse</h1></a>
 
-                        <div class="mb-3">
-                            <label for="LoginPass" class="texto_relleno">Ingrese su contraseña</label>
-                            <input type="password" name='password' class="form-control"
-                                id="LoginPass" placeholder="**************" style="border-color: black;">
-                            <div id="valPassLog" class="texto-error"></div>
-                        </div>
-                        <div class="mb-3">
-
-                        </div>
                         <div>
                             <button style="background-color: #a18052; border-color: #a18052;" type="submit" class="btn btn-primary btn-style btn-login">Iniciar sesión</button>
                         </div>
-                        <div class="texto-inf">
-                            <p>Olvidé mi contraseña</p>
-                        </div>
+                        
                     </form>
                 </div>
-            </div>
-            <div class="col" >
-                <div class="container container-login">
-                    <div class="container titulo-login-top">
-                        <div class="titulo-div-login"><h1>Crear Cuenta</h1>   
-                        </div> <div class="container titulo-login"></div>
-                    </div>
-                    <form id="Reg" onsubmit="return validarReg()">
-                        <div class="mb-3">
-                            <div class="row">
-                                <div class="col">
-                                    <label for="RegInputName" class="texto_relleno">Ingrese su Nombre</label>
-                                </div>
-                                <div class="col">
-                                    <label for="RegInputLastName" class="texto_relleno">Ingrese su Apellido</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" class="form-control"
-                                        id="RegInputName" placeholder="Nombre">
-                                    <div id="valNombReg" class="texto-error"></div>
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control"
-                                        id="RegInputLastName" placeholder="Apellido">
-                                    <div id="valApellReg" class="texto-error"></div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="mb-3">
-                            <label for="RegInputEmail" class="texto_relleno">Ingrese su correo</label>
-                            <input type="email" class="form-control"
-                                id="RegInputEmail" placeholder="ejemplo@mail.com">
-                                <div id="valCorreoReg" class="texto-error"></div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="RegInputPassword" class="texto_relleno">Ingrese su contraseña</label>
-                            <input type="password" class="form-control"
-                                id="RegInputPassword" placeholder="**************">
-                                <div id="valPassReg" class="texto-error"></div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="RegInputPassword1" class="texto_relleno">Repita su contraseña</label>
-                            <input type="password" class="form-control "
-                                id="RegInputPassword1" placeholder="**************">
-                                <div id="valPassReg1" class="texto-error"></div>
-                        </div>
-                        <div>
-                            <button style="background-color: #a18052; border-color: #a18052;" type="submit" class="btn btn-primary btn-style btn-login">Registrarse</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="{% static 'js/validaciones.js' %}"></script>
 {% endblock %}
 
