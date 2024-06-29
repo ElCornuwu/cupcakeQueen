@@ -32,3 +32,6 @@ def productos(request):
 def tortas(request):
     return render(request, 'tortas.html')
 
+def direccion(request):
+    return render(request, 'direccion.html')    
+

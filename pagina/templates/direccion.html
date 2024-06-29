@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}direccion{% endblock %}
+
+{% block body_class %}fondo-index{% endblock %}
+
+
+
+{% block content %}
+<div class="contenedordir">
+    <div>
+        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d107031.74923965908!2d-71.58678582568358!3d-33.03692272194865!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689df007c9aa0b3%3A0xcd3c1f6090897f27!2sForestal!5e0!3m2!1ses!2scl!4v1719626389901!5m2!1ses!2scl" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>  
+    <div class="titulo-direccion">
+        <h1 class="tit"> Direccion</h1>
+        <div class="horizontal"></div>
+        <p  >Actualmente solo es posible retirar los productos en nuestro domicilio.
+            Agradecemos su comprensión y colaboración en este aspecto.
+            Para cualquier consulta adicional o para coordinar el retiro, 
+            no dude en ponerse en contacto con nosotros. Estamos a su disposición 
+            para ayudarle en lo que necesite.
+        </p>
+    
+        <ul>
+            <li><i class="bi bi-geo-alt-fill"></i><p>Serena 109 forestal sur, Viña del Mar.</p></li>
+            <li><i class="bi bi-whatsapp"><p>+569 9958 3906</p></i></li>
+            <li><i class="bi bi-telephone-fill"><p>9 9958 3906</p></i></li>
+        </ul>
+    </div>  
+</div>
+
+
+{% endblock %}
