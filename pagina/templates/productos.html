@@ -7,142 +7,21 @@
 
 {% block content %}
 <section class="producto" id="producto">
-    <div class="main-text">
+    <div class="producto-text">
         <h2>Nuestros Productos</h2>
     </div>
     <div class="menu-content">
-        <div class="row rowP">
-            <img src="img/alfa1.JPG" alt="main-product1">
-            <div class="menu-text">
-                <div class="menu-teft">
-                    <h4>Alfajor</h4>
-                </div>
-                <div class="menu-right">
-                    <h5>$99.999</h5>
-                </div>
+        {% for producto in productos %}
+        <div class="card">
+            <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+            <div class="card-content">
+                <h3>{{ producto.nombre }}</h3>
+                <p>{{ producto.descripcion }}</p>
+                <p class="price">Precio: ${{ producto.precio }}</p>
+                <a href="{% url 'eliminar_producto' producto.id %}">Eliminar Producto</a>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
         </div>
-
-        <div class="row rowP">
-            <img src="img/tor1.jpeg" alt="main-product1">
-            <div class="menu-text">
-                <div class="menu-teft">
-                    <h4>Torta</h4>
-                </div>
-                <div class="menu-right">
-                    <h5>$99.999</h5>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
-        </div>
-
-        <div class="row rowP">
-            <img src="img/tor2.jpeg" alt="main-product1">
-            <div class="menu-text">
-                <div class="menu-teft">
-                    <h4>Torta</h4>
-                </div>
-                <div class="menu-right">
-                    <h5>$99.999</h5>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
-        </div>
-
-        <div class="row rowP">
-            <img src="img/tor3.jpg" alt="main-product1">
-            <div class="menu-text">
-                <div class="menu-teft">
-                    <h4>Torta</h4>
-                </div>
-                <div class="menu-right">
-                    <h5>$99.999</h5>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
-        </div>
-
-        <div class="row rowP">
-            <img src="img/tor4.jpg" alt="main-product1">
-            <div class="menu-text">
-                <div class="menu-teft">
-                    <h4>Torta</h4>
-                </div>
-                <div class="menu-right">
-                    <h5>$99.999</h5>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
-        </div>
-
-        <div class="row rowP">
-            <img src="img/tor5.jpeg" alt="main-product1">
-            <div class="menu-text">
-                <div class="menu-teft">
-                    <h4>Torta</h4>
-                </div>
-                <div class="menu-right">
-                    <h5>$99.999</h5>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
-        </div>
-
-        <div class="row rowP">
-            <img src="img/tor6.jpeg" alt="main-product1">
-            <div class="menu-text">
-                <div class="menu-teft">
-                    <h4>Torta</h4>
-                </div>
-                <div class="menu-right">
-                    <h5>$99.999</h5>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
-        </div>
-
-        <div class="row rowP">
-            <img src="img/tor7.JPG" alt="main-product1">
-            <div class="menu-text">
-                <div class="menu-teft">
-                    <h4>Torta</h4>
-                </div>
-                <div class="menu-right">
-                    <h5>$99.999</h5>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
-        </div>
-
-        <div class="row rowP">
-            <img src="img/tor8.jpeg" alt="main-product1">
-            <div class="menu-text">
-                <div class="menu-teft">
-                    <h4>Torta</h4>
-                </div>
-                <div class="menu-right">
-                    <h5>$99.999</h5>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
-        </div>
-
-        <div class="row rowP">
-            <img src="img/cup1.jpeg" alt="main-product1">
-            <div class="menu-text">
-                <div class="menu-teft">
-                    <h4>Cupcake</h4>
-                </div>
-                <div class="menu-right">
-                    <h5>$99.999</h5>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem excepturi recusandae cum culpa veniam esse repudiandae animi quibusdam, pariatur harum?</p>
-        </div>
-
-        <!-- Agregar más productos según sea necesario -->
-
+        {% endfor %}
     </div>
 </section>
 {% endblock %}
