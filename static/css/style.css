@@ -5,6 +5,26 @@
     font-weight: 600;
 }
 
+@font-face{
+    font-family: ABeeZee;
+    src: url('../resources/ABeeZee-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+.producto-text {
+    text-align: center; 
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.producto-text h2 {
+    font-size: 2.5rem; 
+    font-family: Merienda;
+    color: #333;       
+    margin: 0;     
+    padding: 10px 0;   
+}
+
 .menu-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -14,7 +34,7 @@
     margin-top: 4rem;
     margin-left: 85px;
     margin-right: 85px;
-    margin-bottom: 4rem;
+    margin-bottom: 35px;
 }
 
 .card {
