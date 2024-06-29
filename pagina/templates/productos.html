@@ -7,12 +7,21 @@
 
 {% block content %}
 <section class="producto" id="producto">
-    <div class="main-text">
+    <div class="producto-text">
         <h2>Nuestros Productos</h2>
     </div>
-    
-        <!-- Agregar más productos según sea necesario -->
-
+    <div class="menu-content">
+        {% for producto in productos %}
+        <div class="card">
+            <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+            <div class="card-content">
+                <h3>{{ producto.nombre }}</h3>
+                <p>{{ producto.descripcion }}</p>
+                <p class="price">Precio: ${{ producto.precio }}</p>
+                <a href="{% url 'eliminar_producto' producto.id %}">Eliminar Producto</a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </section>
 {% endblock %}
