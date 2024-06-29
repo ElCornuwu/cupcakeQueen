@@ -1,8 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
+
 # Create your views here.
 
-def pagInicio(request):
+def index(request):
     return render(request, 'index.html')
+
+def exit(request):
+    logout(request)
+    return redirect(index)
 
 def alfajores(request):
     return render(request, 'alfajores.html')
@@ -19,11 +26,9 @@ def form(request):
 def horario(request):
     return render(request, 'horario.html')
 
-def login(request):
-    return render(request, 'login.html')
-
 def productos(request):
     return render(request, 'productos.html')
 
 def tortas(request):
     return render(request, 'tortas.html')
+

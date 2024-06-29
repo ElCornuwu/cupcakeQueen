@@ -1,19 +1,9 @@
 function validarLog() {
     document.getElementById("Login").addEventListener("submit", function(event){event.preventDefault();});
-    var logMail = document.getElementById("LoginEmail").value;
     var mailLogError = document.getElementById('valCorreoLog');
     var logPass = document.getElementById('LoginPass').value;
     var PassLogError =document.getElementById('valPassLog');
 
-
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailPattern.test(logMail)) { 
-        mailLogError.innerText = 'Formato de correo no válido.';
-
-    } else {
-        mailLogError.innerText = '';
-    }
     if (logPass.length < 8) {
         PassLogError.innerText = 'Ingrese contraseña.';
     }else{
