@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth import logout
 from .forms import ContactoForm, CustomUserCreationForm, ProductoForm
 from django.contrib.auth import login
-from .models import Producto, Categoria
+from .models import Producto, Categoria, Contacto
 from django.views.generic import View
 from django.contrib import messages
 
@@ -117,15 +117,6 @@ def buscar_productos(request):
     productos = Producto.objects.filter(nombre__icontains=query) if query else Producto.objects.all()
     return render(request, 'productos.html', {'productos': productos, 'query': query})
 
-def mensajes(request):
-
-    mensajes = Producto.objects.all()
-    context = {
-        'productos': productos
-    }
-    return render(request, 'productos.html', context)
-
-    return render(request, 'mensajes.html')
 def form(request):
     if request.method == 'POST':
         form = ContactoForm(request.POST)
@@ -137,3 +128,10 @@ def form(request):
         form = ContactoForm()
     
     return render(request, 'form.html', {'form': form})
+
+def mensajes(request):
+    mensajes = Contacto.objects.all()
+    context = {
+        'mensajes': mensajes
+    }
+    return render(request, 'mensajes.html', context)
