@@ -832,42 +832,32 @@ color: #381715;
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-.wrapper {
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-nav, main {
-    flex: 1;
-}
-
 footer {
-    background-color: #eaccad; /* Ajusta según tu diseño */
+    background-color: #eaccad;
     padding: 10px 0;
     text-align: center;
     width: 100%;
+    margin-top: auto;
 }
 
-
-
-.footercontainer{
+.footercontainer {
     width: 100%;
     padding: 40px 30px 20px;
 }
 
-.iconos{
+.iconos {
     display: flex;
     justify-content: center;
     background-color: #eaccad;
 }
 
-.iconos a{
+.iconos a {
     text-decoration: none;
     padding: 10px;
     background-color: #e8c39e;
@@ -881,28 +871,27 @@ footer {
     opacity: 0.9;
 }
 
-.iconos a:hover{
+.iconos a:hover {
     background-color: white;
     transition: 0.5s;
 }
 
-.iconos a:hover i{
+.iconos a:hover i {
     color: black;
     transition: 0.5s;
-
 }
 
-.footernav{
+.footernav {
     margin: 30px 0;
 }
 
-.footernav ul{
+.footernav ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
 }
 
-.footernav ul li a{
+.footernav ul li a {
     color: black;
     margin: 20px;
     text-decoration: none;
@@ -911,21 +900,21 @@ footer {
     transition: 0.5s;
 }
 
-.footernav ul li a:hover{
+.footernav ul li a:hover {
     opacity: 1;
 }
 
-.footerbotton{
+.footerbotton {
     background-color: #eaccad;
     padding-bottom: 10px;
     text-align: center;
 }
 
-.footerbotton p{
-    color:black;
+.footerbotton p {
+    color: black;
 }
 
-.designer{
+.designer {
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -933,80 +922,105 @@ footer {
     margin: 0px 5px;
 }
 
-@media(max-width:700px){
-    .footernav ul{
+@media(max-width: 700px) {
+    .footernav ul {
         flex-direction: column;
     }
-    .footernav ul li{
+    .footernav ul li {
         width: 100%;
         text-align: center;
         margin: 10px;
     }
 }
 
-
 /*direccion*/
 
-.contenedordir{
-    min-width: 250px;
+.contenedordir {
     display: flex;
-    margin-top: 90px;
-    margin-bottom: 90px;
-    margin-left: 90px;
-    margin-right: 90px;
-    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-.mapa{
-    margin-right: 50px;
+.mapa {
+    width: 100%; 
+    height: 300px; 
+    margin-bottom: 20px;
 }
 
-.titulo-direccion{
-    background-color: white;  
+.titulo-direccion {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-.horizontal{
-    background-color:#ab5733;
+.horizontal {
+    background-color: #ab5733;
     width: 80%;
     height: 1px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 20px auto; 
 }
 
-.titulo-direccion h1{
-    color:#381715;
-    font-family:  Cormorant Garamond;
-    font-size:40px;
-    justify-content: center; 
-    display: flex;  
-    margin-bottom:20px;
-    margin-top: 20px;
+.titulo-direccion h1 {
+    color: #381715;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
-.titulo-direccion i{
-    display: flex;
-    text-decoration: none; 
-}
+
 .titulo-direccion ul {
     list-style-type: none;
-    font-size: 22px;
-    margin-left: 5%; 
-    margin-top: 40px;
-    font-family:  Abeezee;
-
+    font-size: 18px;
+    padding: 0;
 }
-.titulo-direccion ul p{
-    color: black;
-    margin-left: 15px;
-    margin-top: -15px;
+
+.titulo-direccion ul li {
+    margin-bottom: 10px;
 }
 
 .tex {
-    margin-left: 15px;
     color: black;
-    font-family:  Abeezee;
-    font-size: 22px;
-    margin-left: 9%;
-    margin-right: 9%;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    font-family: 'Abeezee', sans-serif;
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: justify;
+    max-width: 800px;
+}
+
+@media (min-width: 768px) {
+    .contenedordir {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 40px;
+    }
+
+    .mapa {
+        width: 50%;
+        height: 400px; 
+        margin-right: 20px;
+    }
+
+    .titulo-direccion {
+        width: 50%;
+        text-align: left;
+    }
+
+    .horizontal {
+        margin: 20px 10% 30px;
+    }
+
+    .tex {
+        margin: 0;
+    }
+}
+
+.mapa-container {
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }

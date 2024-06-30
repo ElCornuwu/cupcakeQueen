@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
-<h1>Agregar Producto</h1>
-<form method="post" enctype="multipart/form-data">
+<div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+    <h1>Agregar Producto</h1>
+   <form method="post" enctype="multipart/form-data" class="my-2">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Guardar Producto</button>
-</form>
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">Guardar Producto</button>
+    </form> 
+</div>
+
 
 {% endblock %}
