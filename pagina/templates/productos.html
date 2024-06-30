@@ -25,6 +25,7 @@
             <div class="card-content">
                 <h3>{{ producto.nombre }}</h3>
                 <p>{{ producto.descripcion }}</p>
+                <p>{{ producto.categoria}}</p>
                 <p class="price">Precio: ${{ producto.precio|intcomma }}</p>
                 {% if request.user.is_superuser %}
                     <a href="{% url 'editarProducto' producto.id %}">Editar Producto</a>
