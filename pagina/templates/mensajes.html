@@ -3,7 +3,17 @@
 {% block title %} Mensajes {% endblock %}
 
 {% block content %}
-
-
-
+<div class="container">
+    <h2>Mensajes Recibidos</h2>
+    {% for mensaje in mensajes %}
+        <div class="mensaje">
+            <p><strong>Nombre:</strong> {{ mensaje.nombre }}</p>
+            <p><strong>Email:</strong> {{ mensaje.email }}</p>
+            <p><strong>Asunto:</strong> {{ mensaje.asunto }}</p>
+            <p><strong>Mensaje:</strong> {{ mensaje.mensaje }}</p>
+            <p><strong>Fecha de Envío:</strong> {{ mensaje.fecha_envio }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+</div>
 {% endblock %}
