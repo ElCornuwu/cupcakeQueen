@@ -4,11 +4,29 @@
 {% block title %}Cupcake{% endblock %}
 
 {% block content %}
+{% load humanize %}
 <section class="producto" id="producto">
     <div class="main-text">
         <h2>Cupcake Personalizados</h2>
     </div>
 
+    <div class="menu-content">
+        {% for producto in productos %}
+        <div class="card">
+            <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+            <div class="card-content">
+                <h3>{{ producto.nombre }}</h3>
+                <p>{{ producto.descripcion }}</p>
+                <p>{{ producto.categoria}}</p>
+                <p class="price">Precio: ${{ producto.precio|intcomma }}</p>
+                {% if request.user.is_superuser %}
+                    <a href="{% url 'editarProducto' producto.id %}">Editar Producto</a>
+                    <a href="{% url 'eliminar_producto' producto.id %}">Eliminar Producto</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
     
 </section>
 {% endblock %}
