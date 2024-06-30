@@ -34,6 +34,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'horario' %}">Horarios</a>
                     </li>
+                    {% if request.user.is_superuser %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'mensajes' %}">Mensajes</a>
+                        </li>
+                    {% endif %}
                 </ul>
                 <form class="d-flex" method="get" action="{% url 'buscar_productos' %}">
                     <input class="search-index" type="search" name="q" placeholder=" Buscar" aria-label="Search" value="{{ query|default:'' }}">

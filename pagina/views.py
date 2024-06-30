@@ -116,3 +116,13 @@ def buscar_productos(request):
     query = request.GET.get('q', '')
     productos = Producto.objects.filter(nombre__icontains=query) if query else Producto.objects.all()
     return render(request, 'productos.html', {'productos': productos, 'query': query})
+
+def mensajes(request):
+
+    mensajes = Producto.objects.all()
+    context = {
+        'productos': productos
+    }
+    return render(request, 'productos.html', context)
+
+    return render(request, 'mensajes.html')
