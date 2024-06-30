@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth import logout
-from .forms import CustomUserCreationForm, ProductoForm
-from django.contrib.auth import authenticate, login
+from .forms import ContactoForm, CustomUserCreationForm, ProductoForm
+from django.contrib.auth import login
 from .models import Producto, Categoria
 from django.views.generic import View
 from django.contrib import messages
@@ -116,3 +116,15 @@ def buscar_productos(request):
     query = request.GET.get('q', '')
     productos = Producto.objects.filter(nombre__icontains=query) if query else Producto.objects.all()
     return render(request, 'productos.html', {'productos': productos, 'query': query})
+
+def form(request):
+    if request.method == 'POST':
+        form = ContactoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, '¡Recibimos tu mensaje! Gracias por comunicarte.')
+            return redirect('form')  
+    else:
+        form = ContactoForm()
+    
+    return render(request, 'form.html', {'form': form})
