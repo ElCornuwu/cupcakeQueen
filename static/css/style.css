@@ -637,15 +637,18 @@ section{
     left: 0;
     right: 0;
     font-family: Merienda;
-    z-index: 2;
-
+    z-index: 2; 
    
 }
+.titulo_form h1{
+font-size: 40px;
+color: #381715;
+}
+
 
 .titulo_form_top{
     padding: 50px; 
-    position: relative;
-    
+    position: relative; 
 }
 
 .titulo{
@@ -943,76 +946,66 @@ footer {
 
 /*direccion*/
 
-
-
 .contenedordir{
+    min-width: 250px;
     display: flex;
-    justify-content: center;
     margin-top: 90px;
     margin-bottom: 90px;
     margin-left: 90px;
     margin-right: 90px;
+    justify-content: center; 
 }
 
 .mapa{
     margin-right: 50px;
 }
 
-.titulo-direccion p {
-    margin-left: 15px;
-    color: black;
-    font-family:  Abeezee;
-    font-size: 1.1rem;
-    margin-left: 5%;
-    margin-right: 5%;
+.titulo-direccion{
+    background-color: white;  
 }
 
+.horizontal{
+    background-color:#ab5733;
+    width: 80%;
+    height: 1px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.titulo-direccion h1{
+    color:#381715;
+    font-family:  Cormorant Garamond;
+    font-size:40px;
+    justify-content: center; 
+    display: flex;  
+    margin-bottom:20px;
+    margin-top: 20px;
+}
 .titulo-direccion i{
     display: flex;
     text-decoration: none; 
 }
 .titulo-direccion ul {
     list-style-type: none;
-    margin-top: 100px;
-    font-size: 1.1rem;
-    
-}
-
-.bi-whatsapp{
-    color: green;
-}
-.bi-telephone-fill{
-    color: rgba(20, 20, 145, 0.96);
-}
-
-.bi-geo-alt-fill{
-    color: rgb(209, 33, 33);
-}
-
-.bi-geo-alt-fill p{
+    font-size: 22px;
+    margin-left: 5%; 
+    margin-top: 40px;
     font-family:  Abeezee;
-    
+
 }
-.titulo-direccion{
-    background-color: white;
-   
+.titulo-direccion ul p{
+    color: black;
+    margin-left: 15px;
+    margin-top: -15px;
 }
 
-.horizontal{
-    background-color: #faeee3;
-    width: 80%;
-    height: 2px;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.titulo-direccion h1{
-   
-    justify-content: center;
+.tex {
+    margin-left: 15px;
     color: black;
     font-family:  Abeezee;
-    font-size: 1.1rem;
-    margin-left: 15%;
-    margin-right: 5%;
-   
+    font-size: 22px;
+    margin-left: 9%;
+    margin-right: 9%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
