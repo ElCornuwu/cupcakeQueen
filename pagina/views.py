@@ -5,6 +5,7 @@ from .forms import CustomUserCreationForm, ProductoForm
 from django.contrib.auth import authenticate, login
 from .models import Producto, Categoria
 from django.views.generic import View
+from django.contrib import messages
 
 def superuser_required(user):
     return user.is_superuser
@@ -70,7 +71,8 @@ def agregar_producto(request):
         form = ProductoForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('agregarProducto')
+            messages.success(request, 'Producto agregado correctamente.')
+            return redirect('agregarProducto')  # Redirige a la misma página para limpiar el formulario
     else:
         form = ProductoForm()
     
