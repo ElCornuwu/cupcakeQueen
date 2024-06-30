@@ -6,6 +6,7 @@ from django.contrib.auth import login
 from .models import Producto, Categoria, Contacto
 from django.views.generic import View
 from django.contrib import messages
+from django.http import HttpResponseForbidden
 
 def superuser_required(user):
     return user.is_superuser
@@ -123,15 +124,39 @@ def form(request):
         if form.is_valid():
             form.save()
             messages.success(request, '¡Recibimos tu mensaje! Gracias por comunicarte.')
-            return redirect('form')  
+            return redirect('form')
     else:
-        form = ContactoForm()
+        initial_data = {}
+        if request.user.is_authenticated:
+            initial_data = {
+                'nombre': request.user.get_full_name(),
+                'email': request.user.email,
+            }
+        form = ContactoForm(initial=initial_data)
     
     return render(request, 'form.html', {'form': form})
 
+@user_passes_test(superuser_required)
 def mensajes(request):
-    mensajes = Contacto.objects.all()
+    mensajes = Contacto.objects.all().order_by('-fecha_envio')
     context = {
         'mensajes': mensajes
     }
     return render(request, 'mensajes.html', context)
+
+@user_passes_test(superuser_required)
+def mensaje_detalle(request, mensaje_id):
+    mensaje = get_object_or_404(Contacto, id=mensaje_id)
+    context = {
+        'mensaje': mensaje
+    }
+    return render(request, 'mensaje_detalle.html', context)
+
+@user_passes_test(superuser_required)
+def eliminar_mensaje(request, mensaje_id):
+    if request.user.is_superuser:
+        mensaje = get_object_or_404(Contacto, id=mensaje_id)
+        mensaje.delete()
+        return redirect('mensajes')
+    else:
+        return HttpResponseForbidden()
