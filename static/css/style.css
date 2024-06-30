@@ -145,7 +145,7 @@ button{
     font-family: Merienda;
 }
 
-.container-login{
+.container-login {
     padding-top: 3%;
     border-style: solid;
     border-width: 1px;
@@ -155,11 +155,13 @@ button{
     background-color: white;
     margin-top: 10%;
     width: 30%;
-    margin-left: 35%;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 3%;
     padding-right: 3%;
     margin-bottom: 10%;
-    min-width: fit-content;
+    min-width: 300px; 
+    max-width: 30%; 
 }
 
 .container-registro{
@@ -722,11 +724,10 @@ color: #381715;
     border-style: solid;
     border-width: 1px;
     border-color: #a18052;
-    z-index: -2;
+    z-index: 1;  
     width: 60%;
     max-width: 1400px;
     min-width: 800px;
-
 }
 
 .errorForm{
@@ -745,7 +746,7 @@ color: #381715;
     border-color: #a18052;
     padding: 60px;
     font-family: AbeeZee;
-    z-index: 10;
+    z-index: 1;  
 }
 
 .titulo_form{
@@ -760,7 +761,7 @@ color: #381715;
     left: 0;
     right: 0;
     font-family: Merienda;
-    z-index: 2;
+    z-index: 2;  
 }
 
 .titulo_form_top{
@@ -806,6 +807,7 @@ color: #381715;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
+    z-index: 10; 
 }
 
 .modal_close{
@@ -1024,3 +1026,200 @@ footer {
     border-radius: 8px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
+
+
+/*Mensajes*/
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .header {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container .header h2 {
+    color: #333;
+}
+
+.container .message-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container .message-item {
+    background-color: #ffeeba;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.container .message-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.container .message-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.container .message-item a:hover {
+    text-decoration: underline;
+}
+
+
+/*Detalle_mensaje*/
+
+
+.container-message {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #a18052;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: AbeeZee, sans-serif;
+    overflow: hidden;
+}
+
+.container-message h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #381715;
+    text-align: center;
+}
+
+.message-detail {
+    padding: 20px;
+}
+
+.message-detail p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    line-height: 1.4;
+    color: #333;
+    text-align: justify;
+}
+
+.message-detail p strong {
+    color: #a18052;
+}
+
+.message-content {
+    word-wrap: break-word; 
+    white-space: pre-wrap; 
+}
+
+.actions {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 20px;
+}
+
+.actions a,
+.actions form {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+.delete-form {
+    display: inline-block;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .container-message {
+        padding: 15px;
+        margin: 30px auto;
+    }
+
+    .container-message h1 {
+        font-size: 1.5em;
+    }
+
+    .message-detail p {
+        font-size: 1em;
+        margin: 8px 0;
+    }
+
+    .btn-link,
+    .btn-danger {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-message {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .container-message h1 {
+        font-size: 1.2em;
+    }
+
+    .message-detail p {
+        font-size: 0.9em;
+        margin: 6px 0;
+    }
+
+    .btn-link,
+    .btn-danger {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}
+

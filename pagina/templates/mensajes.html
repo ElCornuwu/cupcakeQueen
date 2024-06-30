@@ -4,10 +4,12 @@
 
 {% block content %}
 <div class="container">
-    <div style="text-align: center; margin-top: 30px; margin-bottom: 30px;"><h2>Mensajes Recibidos</h2></div>
-    <ul>
+    <div class="header">
+        <h2>Mensajes Recibidos</h2>
+    </div>
+    <ul class="message-list">
         {% for mensaje in mensajes %}
-            <li>
+            <li class="message-item">
                 <a href="{% url 'mensaje_detalle' mensaje.id %}">
                     <strong>{{ mensaje.nombre }}</strong> - {{ mensaje.asunto }} ({{ mensaje.fecha_envio }})
                 </a>
