@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth import logout
 from .forms import CustomUserCreationForm, ProductoForm
 from django.contrib.auth import authenticate, login
 from .models import Producto, Categoria
 from django.views.generic import View
-# Create your views here.
+
+def superuser_required(user):
+    return user.is_superuser
 
 def index(request):
     return render(request, 'index.html')
@@ -35,7 +37,7 @@ def horario(request):
     return render(request, 'horario.html')
 
 def productos(request):
-    productos = Producto.objects.all()  # Obtener todos los productos
+    productos = Producto.objects.all()
     context = {
         'productos': productos
     }
@@ -62,17 +64,19 @@ def cupcake(request):
 def direccion(request):
     return render(request, 'direccion.html')    
 
+@user_passes_test(superuser_required)
 def agregar_producto(request):
     if request.method == 'POST':
         form = ProductoForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('agregarProducto')  # Redirige a donde desees tras guardar el producto
+            return redirect('agregarProducto')
     else:
         form = ProductoForm()
     
     return render(request, 'agregarProducto.html', {'form': form})
 
+@user_passes_test(superuser_required)
 def eliminar_producto(request, producto_id):
     producto = get_object_or_404(Producto, pk=producto_id)
     
@@ -91,7 +95,8 @@ class ProductoDeleteView(View):
         producto = get_object_or_404(Producto, pk=producto_id)
         producto.delete()
         return redirect('productos')
-    
+
+@user_passes_test(superuser_required)    
 def editarProducto(request, producto_id):
     producto = get_object_or_404(Producto, id=producto_id)
     
@@ -99,7 +104,7 @@ def editarProducto(request, producto_id):
         form = ProductoForm(request.POST, request.FILES, instance=producto)
         if form.is_valid():
             form.save()
-            return redirect('productos')  # Redirige a la lista de productos después de guardar
+            return redirect('productos')  
     else:
         form = ProductoForm(instance=producto)
     
