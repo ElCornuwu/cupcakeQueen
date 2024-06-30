@@ -828,9 +828,29 @@ section{
     box-sizing: border-box;
 }
 
-footer{
-    background-color: #eaccad;
+body, html {
+    height: 100%;
+    margin: 0;
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav, main {
+    flex: 1;
+}
+
+footer {
+    background-color: #eaccad; /* Ajusta según tu diseño */
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+
 
 .footercontainer{
     width: 100%;

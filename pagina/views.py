@@ -104,3 +104,8 @@ def editarProducto(request, producto_id):
         form = ProductoForm(instance=producto)
     
     return render(request, 'editarProducto.html', {'form': form, 'producto': producto})
+
+def buscar_productos(request):
+    query = request.GET.get('q', '')
+    productos = Producto.objects.filter(nombre__icontains=query) if query else Producto.objects.all()
+    return render(request, 'productos.html', {'productos': productos, 'query': query})

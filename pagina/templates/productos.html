@@ -9,7 +9,7 @@
 {% load humanize %}
 <section class="producto" id="producto">
     <div class="producto-text">
-        <h2>Nuestros Productos</h2>
+        <h2>{% if query %}Resultados de búsqueda para "{{ query }}"{% else %}Nuestros Productos{% endif %}</h2>
     </div>
     {% if request.user.is_superuser %}
     <div>
@@ -25,7 +25,6 @@
             <div class="card-content">
                 <h3>{{ producto.nombre }}</h3>
                 <p>{{ producto.descripcion }}</p>
-                <p>{{ producto.categoria}}</p>
                 <p class="price">Precio: ${{ producto.precio|intcomma }}</p>
                 {% if request.user.is_superuser %}
                     <a href="{% url 'editarProducto' producto.id %}">Editar Producto</a>
@@ -33,6 +32,8 @@
                 {% endif %}
             </div>
         </div>
+        {% empty %}
+        <p>No se encontraron productos para la búsqueda "{{ query }}".</p>
         {% endfor %}
     </div>
 </section>

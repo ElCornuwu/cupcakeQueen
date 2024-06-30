@@ -19,6 +19,7 @@ urlpatterns = [
     path('agregarProducto/', views.agregar_producto, name='agregarProducto'),
     path('eliminar/<int:producto_id>/', ProductoDeleteView.as_view(), name='eliminar_producto'),
     path('editar/<int:producto_id>/', views.editarProducto, name='editarProducto'),
+    path('buscar/', views.buscar_productos, name='buscar_productos'),
 ]
 
 if settings.DEBUG:
