@@ -35,7 +35,7 @@
 
 .menu-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
     align-items: center;
     justify-content: center;
@@ -52,7 +52,17 @@
     overflow: hidden;
     transition: transform 0.3s ease;
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
+}
+
+.desc-producto{
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+    background-color: #d6d4d318;
+    padding: 7px;
+    border-radius: 10px;
+    margin: 10px 0;
 }
 
 .card:hover {
@@ -61,7 +71,7 @@
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 400px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
@@ -264,15 +274,11 @@ button{
 }
 
 /*index*/
-@font-face{
-    font-family: "Merienda";
-    src: url(resources/Merienda-VariableFont_wght.ttf);
-    font-weight: 600;
-}
-/*---------------------------------*/
+
 section{
     padding: 45px 10% 20px;
 }
+
 .home {
     width: 100%;
     position: relative;
@@ -280,12 +286,11 @@ section{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
-
-
     height: 37rem;
     background-size: cover;
     background-position: center;
 }
+
 .home-text{
     animation: mover-izquierda-derecha 2s 1;
     animation-fill-mode: forwards;
@@ -293,6 +298,7 @@ section{
     margin: 0 auto;
     padding: 1rem 0;
 }
+
 .home-text h1{
     color: white;
     font-size: 4.5rem;
@@ -301,6 +307,7 @@ section{
     margin-bottom: 2rem;
     line-height: 1.0;
 }
+
 .home-text p{
     color: white;
     font-size: 1.1rem;
@@ -317,7 +324,6 @@ section{
         transform: translateX(5px);
     }   
 }
-/*---------------------------------*/
 
 .icono-login{
     opacity: 0.7;
@@ -328,29 +334,11 @@ section{
     overflow-clip-margin: content-box;
     overflow: clip;
 }
-
-
-
-
+    
 .car-div{
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 0;
-    border-width: 1px;
-    border-color: #a16852;
-    padding-top: 50px;
-    padding-bottom: 50px;       
-    position: relative;
-    box-sizing: border-box;
-    
-}
-    
-.juan{
     width: 100%;
     margin-top: 100px; 
-    
 }
-
 
 .car-text{
     font-size: 20px;    
@@ -440,6 +428,7 @@ section{
     text-transform: capitalize;
     position: relative;
 }
+
 .card-category p::after{
     content: '';
     width: 2.5rem;

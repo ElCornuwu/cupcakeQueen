@@ -24,7 +24,9 @@
             <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
             <div class="card-content">
                 <h3>{{ producto.nombre }}</h3>
-                <p>{{ producto.descripcion }}</p>
+                <div class="desc-producto">
+                    <p>{{ producto.descripcion }}</p>
+                </div>
                 <p>{{ producto.categoria}}</p>
                 <p class="price">Precio: ${{ producto.precio|intcomma }}</p>
                 {% if request.user.is_superuser %}
