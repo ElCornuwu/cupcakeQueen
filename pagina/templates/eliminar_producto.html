@@ -8,7 +8,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="container" style="text-align: center; margin-top: 100px; margin-bottom: 100px;">
+<div class="container-eliminar">
+    <div class="eliminar">
     <h2>¿Estás seguro de que deseas eliminar este producto?</h2>
     <p><strong>Nombre:</strong> {{ producto.nombre }}</p>
     <p><strong>Descripción:</strong> {{ producto.descripcion }}</p>
@@ -22,6 +23,7 @@
             <a href="{% url 'productos' %}" class="btn btn-secondary">Cancelar</a>
         </div>
     </form>
+    </div>
 </div>
 
 {% endblock %}
