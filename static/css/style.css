@@ -274,7 +274,6 @@ button{
 }
 
 /*index*/
-
 section{
     padding: 45px 10% 20px;
 }
@@ -402,7 +401,7 @@ section{
 } 
 
 .category-torta{
-    background-image: linear-gradient(#00000080,#00000080),url(img/torta.jpeg);
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -546,7 +545,7 @@ section{
    
 }
 
-/*--------------------horario------------------------*/
+/*horario*/
 
 .form-div{
     background-color: white;
@@ -709,7 +708,7 @@ color: #381715;
     color: black;
 }
 
-/*----------------------form------------------------*/
+/*form*/
 
 .form-div{
     background-color: white;
@@ -824,7 +823,7 @@ color: #381715;
     color: black;
 }
 
-/*-------------------------footer-----------------*/
+/*footer*/
 *{
     padding: 0;
     margin: 0;
@@ -932,7 +931,7 @@ footer {
     }
 }
 
-/*-------------------------------direccion---------------------------*/
+/*direccion*/
 
 .contenedordir {
     display: flex;
@@ -1031,7 +1030,7 @@ footer {
 }
 
 
-/*--------------Mensajes---------------*/
+/*Mensajes*/
 
 .boss{
     background-color: white;
@@ -1113,7 +1112,7 @@ footer {
 }
 
 
-/*---------------------------Detalle_mensaje-----------------*/
+/*Detalle_mensaje*/
 
 .container-message {
     max-width: 600px;
@@ -1236,7 +1235,7 @@ footer {
     }
 }
 
-/*------------------------ELIMANAR PRODUCTOS-------------------------------*/
+/*Eliminar-productos*/
 
 
 .container-eliminar {
@@ -1281,7 +1280,7 @@ footer {
     }
 }
 
-/*------------------------EDITAR PRODUCTOS-------------------------------*/
+/*Editar-productos*/
 
 .container-editar {
     background-color: white;
@@ -1343,7 +1342,7 @@ footer {
 }
 
 
-/*------------------------AGREGAR PRODUCTOS-------------------------------*/
+/*Agregar-producto*/
 .container-agregar {
     background-color: white;
     margin: 50px auto;

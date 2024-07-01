@@ -73,7 +73,7 @@ def agregar_producto(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Producto agregado correctamente.')
-            return redirect('agregarProducto')  # Redirige a la misma página para limpiar el formulario
+            return redirect('agregarProducto')  
     else:
         form = ProductoForm()
     
