@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block title %}
-    Contáctanos
+    Reseñas
 {% endblock %}
 
 {% block content %}
@@ -13,6 +13,7 @@
     </header>
 
     <main>
+        {% if user.is_authenticated %}
         <section id="crear-resena">
             <h2>Crear Reseña</h2>
             <form id="resena-form">
@@ -40,6 +41,7 @@
                 <button type="submit">Publicar Reseña</button>
             </form>
         </section>
+        {% endif %}
 
         <section id="resenas-publicadas">
             <h2>Reseñas Publicadas</h2>

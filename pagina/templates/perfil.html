@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Perfil de Usuario{% endblock %}
+
+{% block content %}
+<main>
+    <section id="perfil">
+        <div class="perfil-container">
+            <div class="perfil-header">
+                <div class="perfil-imagen">
+                    <img src="{% if user.profile.image %}{{ user.profile.image.url }}{% else %}https://via.placeholder.com/150{% endif %}" alt="Imagen de perfil">
+                </div>
+                <div class="perfil-info">
+                    <h2>{{ user.username }}</h2>
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                    <p><strong>Fecha de registro:</strong> {{ user.date_joined|date:"d M Y" }}</p>
+                </div>
+            </div>
+
+            <div class="perfil-opciones">
+                <h3>Opciones</h3>
+                <ul>
+                    <li><a href="{% url 'editar_perfil' %}" class="btn">Edit    ar Perfil</a></li>
+                    <li><a href="{% url 'mis_resenas' %}" class="btn">Mis Reseñas</a></li>
+                    <li><a href="{% url 'cambiar_contrasena' %}" class="btn">Cambiar Contraseña</a></li>
+                    <li><a href="{% url 'exit' %}" class="btn btn-danger">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

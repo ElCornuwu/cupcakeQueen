@@ -5,18 +5,22 @@ from django.conf.urls.static import static
 from .views import ProductoDeleteView
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.resenia, name='resenia'),
+    path('foro/', views.foro, name='foro'),
+    path('perfil/', views.perfil, name='perfil'),
+    
     path('register/', views.register, name='register'),
     path('logout/', views.exit, name='exit'),
     path('alfajores/', views.alfajores, name='alfajores'),
     path('base/', views.base, name='base'),
     path('cupcake/', views.cupcake, name='cupcake'),
     path('form/', views.form, name='form'),
-    path('horario/', views.horario, name='horario'),
     path('productos/', views.productos, name='productos'),
     path('tortas/', views.tortas, name='tortas'),
-    path('direccion/', views.direccion, name='direccion'),
+
     path('mensajes/', views.mensajes, name='mensajes'),
+    
+
     path('mensajes/eliminar/<int:mensaje_id>/', views.eliminar_mensaje, name='eliminar_mensaje'),
     path('mensajes/<int:mensaje_id>/', views.mensaje_detalle, name='mensaje_detalle'),
     path('agregarProducto/', views.agregar_producto, name='agregarProducto'),

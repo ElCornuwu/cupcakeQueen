@@ -11,8 +11,14 @@ from django.http import HttpResponseForbidden
 def superuser_required(user):
     return user.is_superuser
 
-def index(request):
-    return render(request, 'index.html')
+def resenia(request):
+    return render(request, 'resenia.html')
+
+def foro(request):
+    return render(request, 'foro.html')
+
+def perfil(request):
+    return render(request, 'perfil.html')
 
 def register(request):
     if request.method == 'POST':
@@ -20,14 +26,14 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('index')
+            return redirect('resenia')
     else:
         form = CustomUserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
 
 def exit(request):
     logout(request)
-    return redirect(index)
+    return redirect(resenia)
 
 def base(request):
     return render(request, 'base.html')
