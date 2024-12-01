@@ -14,7 +14,7 @@ urlpatterns = [
     path('alfajores/', views.alfajores, name='alfajores'),
     path('base/', views.base, name='base'),
     path('cupcake/', views.cupcake, name='cupcake'),
-    path('form/', views.form, name='form'),
+  
     path('productos/', views.productos, name='productos'),
     path('tortas/', views.tortas, name='tortas'),
 

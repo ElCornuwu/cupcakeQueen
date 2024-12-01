@@ -50,6 +50,7 @@
                 <p><strong>Categoría:</strong> Videojuegos</p>
                 <p><strong>Tipo:</strong> Positiva</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.</p>
+                {% if user.is_authenticated %}
                 <div class="acciones">
                     <button class="like-btn">👍 0</button>
                     <button class="dislike-btn">👎 0</button>
@@ -61,6 +62,7 @@
                     <textarea class="comentario-input" placeholder="Escribe tu comentario..."></textarea>
                     <button class="comentario-enviar">Enviar</button>
                 </div>
+                {% endif %}
             </div>
         </section>
     </main>

@@ -1,34 +1,35 @@
+
+
+
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block title %}
     Iniciar Sesión
 {% endblock %}
 
 {% block content %}
-
-{% load crispy_forms_tags %}
-                <div class="container-login">
-                    <div class="container titulo-login-top">
-                        <div class="titulo-div-login"><h1>Iniciar Sesión</h1>   
-                        </div> <div class="container titulo-login"></div>
-                    </div>
-
-                    <form id="Login" action="" method="post">
-                        {% csrf_token %}
-                        
-                        {{ form | crispy }}
-                        
-                        <a href="{% url 'register' %}"><h1 class="texto-inf">Registrarse</h1></a>
-
-                        <div>
-                            <button style="background-color: #a18052; border-color: #a18052;" type="submit" class="btn btn-primary btn-style btn-login">Iniciar sesión</button>
-                        </div>
-                        
-                    </form>
-                </div>
+<div class="container-login">
+    <form id="Login" action="" method="post">
+        {% csrf_token %}
+        
+        <!-- Título en la parte superior -->
+        <div class="titulo-div-login">
+            <h1>Iniciar Sesión</h1>
+        </div>
+        
+        <!-- Campos del formulario -->
+        {{ form.username|as_crispy_field }}
+        {{ form.password|as_crispy_field }}
+        
+        <!-- Botón para iniciar sesión -->
+        <button type="submit" class="btn btn-primary btn-style btn-login">Iniciar sesión</button>
+        
+        <!-- Enlace de registro -->
+        <a href="{% url 'register' %}">
+            <h1 class="texto-inf">Registrarse</h1>
+        </a>
+    </form>
+</div>
 {% endblock %}
-
-
-
-    

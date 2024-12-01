@@ -20,11 +20,12 @@
             <div class="navbar-left">
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                    <a class="nav-link" href="{% url 'resenia' %}">Reseñas</a>
+                </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'foro' %}">Foros</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'resenia' %}">Reseñas</a>
-                    </li>
+                    
                     {% if user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'perfil' %}">Perfil</a>

@@ -166,3 +166,5 @@ def eliminar_mensaje(request, mensaje_id):
         return redirect('mensajes')
     else:
         return HttpResponseForbidden()
+
+    
